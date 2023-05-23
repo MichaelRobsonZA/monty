@@ -31,8 +31,24 @@ int main(int argc, char *argv[])
     while ((read = getline(&line, &len, file)) != -1)
     {
         line_number++;
-        /* Parse instruction and argument from line */
-        /* Find corresponding function in opcodes array and call it */
+         char *instruction = strtok(line, " \n");
+        if (instruction == NULL || instruction[0] == '#')
+            continue;
+
+        instruction_t *opcode = opcodes;
+
+        while (opcode->opcode != NULL)
+        {
+            if (strcmp(opcode->opcode, instruction) == 0)
+            {
+                opcode->f(&stack,   opcode++;
+    }
+
+   if (opcode->opcode == NULL)
+   {
+    fprintf(stderr, "L%u: unknown instruction %s\n", line_number, instruction);
+    exit(EXIT_FAILURE);
+   }
     }
 
     fclose(file);
