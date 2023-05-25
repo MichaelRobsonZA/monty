@@ -11,6 +11,8 @@ instruction_t *get_instruction(char *opcode)
     static instruction_t instructions[] = {
         {"push", push},
         {"pall", pall},
+	{"pint", pint},
+	 {"pop", pop},
         /* add more opcodes here */
         {NULL, NULL}
     };
