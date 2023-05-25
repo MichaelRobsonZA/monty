@@ -12,7 +12,10 @@ instruction_t *get_instruction(char *opcode)
         {"push", push},
         {"pall", pall},
 	{"pint", pint},
-	 {"pop", pop},
+	{"pop", pop},
+	{"swap", swap},
+	{"add", add},
+	{"nop", nop},
         /* add more opcodes here */
         {NULL, NULL}
     };
