@@ -16,6 +16,7 @@ instruction_t *get_instruction(char *opcode)
 	{"swap", swap},
 	{"add", add},
 	{"nop", nop},
+	{"sub", sub},
         /* add more opcodes here */
         {NULL, NULL}
     };
